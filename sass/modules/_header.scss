@@ -1,0 +1,32 @@
+//header style
+@mixin header-style($height) {
+  @if $height == "small" {
+    .header {
+      height: $smallnav + px;
+      @include box-sizing(border-box);
+    }
+  }
+
+  @else if $height == "medium" {
+    .header {
+      height: $mediumnav + px;
+      @include box-sizing(border-box);
+    }
+
+  }
+
+  @else if $height == "large" {
+    .header {
+      height: $largenav + px;
+      @include box-sizing(border-box);
+    }
+  }
+}
+
+// can modify height
+@mixin header($nav_height) {
+  .header {
+    height: $nav_height + px;
+    @include box-sizing(border-box);
+  }
+}

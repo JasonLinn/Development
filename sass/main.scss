@@ -1,0 +1,18 @@
+@import "vender/bootstrap-sass/bootstrap";
+@import "base/var";
+@import "base/font";
+@import "base/reset";
+@import "base/setting";
+@import "modules/header";
+@import "modules/banner";
+
+
+//font
+@include body-font();
+
+//header style
+// @include header-style(small);
+@include header($nav_height);
+
+
+

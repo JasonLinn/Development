@@ -1,0 +1,10 @@
+.banner {
+  width: 1920px;
+  height: $banner_height + px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.color-red {
+    background-color: $banner-bg__color;
+  }
+}
