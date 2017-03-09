@@ -7741,10 +7741,21 @@ button.close {
   height: 450px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .banner.color-red {
   background-color: red;
+}
+
+.login {
+  width: 280px;
+  background-color: #999;
+  height: 100px;
+  position: absolute;
+  z-index: 1000;
+  left: 900px;
+  top: 10px;
 }
 
 body {

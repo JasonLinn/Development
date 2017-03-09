@@ -3,6 +3,7 @@
   height: $banner_height + px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 
   &.color-red {
     background-color: $banner-bg__color;
