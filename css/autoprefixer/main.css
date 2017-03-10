@@ -7734,12 +7734,12 @@ body {
 }
 
 .header .header--top {
-  height: 30px;
+  height: 40px;
   box-sizing: border-box;
 }
 
 .header .header--menu {
-  height: 120px;
+  height: 150px;
   box-sizing: border-box;
 }
 
@@ -7758,4 +7758,13 @@ body {
 
 .header .header--login {
   background-color: #888;
+}
+
+.banner_carousel {
+  width: 1920px;
+}
+
+.banner_carousel .banner-item {
+  width: 100%;
+  height: 450px;
 }
