@@ -7734,17 +7734,17 @@ body {
 }
 
 .header .header--top {
-  height: 50px;
+  height: 30px;
   box-sizing: border-box;
 }
 
 .header .header--menu {
-  height: 100px;
+  height: 120px;
   box-sizing: border-box;
 }
 
 .header .header--login {
-  height: 50px;
+  height: 30px;
   box-sizing: border-box;
 }
 
