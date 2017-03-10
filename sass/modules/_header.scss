@@ -24,9 +24,21 @@
 }
 
 // can modify height
-@mixin header($nav_height) {
+@mixin headers($header_height , $top_height , $menu_height , $login_height) {
   .header {
-    height: $nav_height + px;
+    height: $header_height;
     @include box-sizing(border-box);
+    .header--top {
+      height: $top_height;
+      @include box-sizing(border-box);
+    }
+    .header--menu {
+      height: $menu_height;
+      @include box-sizing(border-box);
+    }
+    .header--login {
+      height: $login_height;
+      @include box-sizing(border-box);
+    }
   }
 }

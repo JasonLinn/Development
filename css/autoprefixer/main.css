@@ -7688,6 +7688,16 @@ button.close {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .banner {
   width: 1920px;
   height: 450px;
@@ -7719,6 +7729,33 @@ body {
 }
 
 .header {
-  height: 130px;
+  height: auto;
   box-sizing: border-box;
+}
+
+.header .header--top {
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.header .header--menu {
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.header .header--login {
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.header .header--top {
+  background-color: #999;
+}
+
+.header .header--menu {
+  background-color: #666;
+}
+
+.header .header--login {
+  background-color: #888;
 }

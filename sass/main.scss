@@ -3,6 +3,7 @@
 @import "base/font";
 @import "base/reset";
 @import "base/setting";
+@import "mixin/mixin";
 @import "modules/header";
 @import "modules/banner";
 @import "modules/login";
@@ -13,7 +14,15 @@
 
 //header style
 // @include header-style(small);
-@include header($nav_height);
+@include headers(auto , 50px , 100px , 50px);
+
+.header {
+   .header--top {  background-color: #999; }
+   .header--menu {  background-color: #666; }
+   .header--login {  background-color: #888; }
+}
+
+
 
 
 
