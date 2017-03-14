@@ -25,18 +25,23 @@ var web = {
     ],
     html: [
         'app/*.html',
-        'app/**/*.html'
+        'app/**/*.html',
+        'app/**/**/*.html'
     ],
     zips: [
         '*.html',
         'css/*.css'
     ],
     move: [
-         'js/*.',
+         'js/*',
          'css/*',
          'images/*',
          '*.html'
-    ]
+    ],
+    js: [
+        'js/*',
+         'js/**/*',
+    ] 
     // images: 'resources/assets/images/*',
     // fonts: ['resources/assets/fonts/*', 'resources/assets/fonts/**/*'],
     // sass: [
@@ -85,6 +90,10 @@ gulp.task('fileinclude', function () {
         .pipe(gulp.dest('./'));
 });
 
+// js 
+
+
+
 //move fifle
 
 gulp.task('copy' , function(){
@@ -116,6 +125,7 @@ gulp.task('static', ['styles'], function () {
     gulp.watch('css/*.css', ['css']).on('change', reload); //watch  sass
     gulp.watch('*.html').on('change', reload); //watch html
     gulp.watch( web.html , ['fileinclude'] ).on('change', reload); //watch template
+    gulp.watch( web.js ).on('change', reload); //watch js
     gulp.watch( web.move , ['copy'] ).on('change', reload); //watch template
   
 });
@@ -124,7 +134,6 @@ gulp.task('static', ['styles'], function () {
 gulp.task('compress',['css','styles','fileinclude','copy'] ,function() {
   // Do stuff
 });
-
 
 //執行指令
 

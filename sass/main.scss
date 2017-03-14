@@ -8,28 +8,43 @@
 @import "modules/banner";
 @import "modules/login";
 
-
 //font
 @include body-font();
 
 //header style
 // @include header-style(small);
 @include headers(auto , 100px , 100px ,40px);
+
 .header {
-   .header--top {  background-color: #999; }
-   .header--menu {  background-color: #666; }
-   .header--login {  background-color: #888; }
+  .header--top {
+    background-color: #999;
+  }
+
+  .header--menu {
+    background-color: #666;
+  }
+
+  .header--login {
+    background-color: #888;
+  }
 }
 
+.banner_carousel {
+  width: 1920px;
 
-.banner_carousel { 
-    width: 1920px;
-   .banner-item {
-       width: 100%;
-       height: 450px;
-   }
+  .banner-item {
+    width: 100%;
+    height: 450px;
+  }
 }
 
+.header--menu {
+  .link {}
 
+  .menu {
+    .sub_menu {
+      display: none;
+    }
+  }
 
-
+}
