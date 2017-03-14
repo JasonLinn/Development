@@ -120,7 +120,13 @@ gulp.task('zipfile', function () {
 
 });
 
+gulp.task('compress',['css','styles','fileinclude', 'copy','zipfile'] ,function() {
+  // Do stuff
+  
+});
+
+
 //執行指令
 
 gulp.task('default', ['static']);
-gulp.task('zip', [ 'copy' , 'zipfile']);
+gulp.task('zip', ['compress']);
