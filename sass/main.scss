@@ -14,7 +14,7 @@
 
 //header style
 // @include header-style(small);
-@include headers(auto , 40px , 100px ,30px);
+@include headers(auto , 100px , 100px ,40px);
 .header {
    .header--top {  background-color: #999; }
    .header--menu {  background-color: #666; }

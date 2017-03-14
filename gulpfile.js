@@ -85,28 +85,11 @@ gulp.task('fileinclude', function () {
         .pipe(gulp.dest('./'));
 });
 
-
-//broswerSync static
-gulp.task('static', ['styles'], function () {
-    browserSync.init({
-        server: {
-            baseDir: "./",
-            index: "index.html"
-        }
-    });
-    gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
-    gulp.watch('css/*.css', ['css']).on('change', reload); //watch  sass
-    gulp.watch('*.html').on('change', reload); //watch html
-    gulp.watch( web.html , ['fileinclude'] ).on('change', reload); //watch template
-  
-});
-
-
 //move fifle
 
 gulp.task('copy' , function(){
-  return gulp.src(web.move , {base:'src'})   
-             .pipe(gulp.dest('dist/files'));
+  return gulp.src(web.move, {base:'./'})   
+             .pipe(gulp.dest('./dist'));
 });
 
 //打包
@@ -120,9 +103,26 @@ gulp.task('zipfile', function () {
 
 });
 
-gulp.task('compress',['css','styles','fileinclude', 'copy','zipfile'] ,function() {
-  // Do stuff
+
+//broswerSync static
+gulp.task('static', ['styles'], function () {
+    browserSync.init({
+        server: {
+            baseDir: "./",
+            index: "index.html"
+        }
+    });
+    gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
+    gulp.watch('css/*.css', ['css']).on('change', reload); //watch  sass
+    gulp.watch('*.html').on('change', reload); //watch html
+    gulp.watch( web.html , ['fileinclude'] ).on('change', reload); //watch template
+    gulp.watch( web.move , ['copy'] ).on('change', reload); //watch template
   
+});
+
+
+gulp.task('compress',['css','styles','fileinclude','copy'] ,function() {
+  // Do stuff
 });
 
 
