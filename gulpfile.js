@@ -9,10 +9,13 @@ var gulp = require('gulp'),
     extender = require('gulp-html-extend'),
     fileinclude = require('gulp-file-include'),
     zip = require('gulp-zip'),
+    gulpCopy = require('gulp-copy'),
+    moment = require("moment"),
     gulpPlumber = require('gulp-plumber');
 
 // common
 var reload = browserSync.reload;
+
 //path
 var web = {
     sass: [
@@ -27,6 +30,12 @@ var web = {
     zips: [
         '*.html',
         'css/*.css'
+    ],
+    move: [
+         'js/*.',
+         'css/*',
+         'images/*',
+         '*.html'
     ]
     // images: 'resources/assets/images/*',
     // fonts: ['resources/assets/fonts/*', 'resources/assets/fonts/**/*'],
@@ -36,6 +45,9 @@ var web = {
     // ],
     // tmp: 'resources/assets/tmp/css/*.css'
 };
+
+
+
 
 gulp.task('css', function () {
     var plugins = [
@@ -62,6 +74,7 @@ gulp.task('styles', function () {
 
 });
 
+//html
 gulp.task('fileinclude', function () {
     gulp.src(['app/*.html'])
         .pipe(gulpPlumber())
@@ -72,19 +85,6 @@ gulp.task('fileinclude', function () {
         .pipe(gulp.dest('./'));
 });
 
-
-
-
-// template
-// gulp.task('extend', function () {
-//     gulp.src('./*.html')
-//         .pipe(extender({
-//             annotations: true,
-//             verbose: false
-//         })) // default options
-//         .pipe(gulp.dest('./output'))
-
-// });
 
 //broswerSync static
 gulp.task('static', ['styles'], function () {
@@ -98,20 +98,29 @@ gulp.task('static', ['styles'], function () {
     gulp.watch('css/*.css', ['css']).on('change', reload); //watch  sass
     gulp.watch('*.html').on('change', reload); //watch html
     gulp.watch( web.html , ['fileinclude'] ).on('change', reload); //watch template
-
+  
 });
+
+
+//move fifle
+
+gulp.task('copy' , function(){
+  return gulp.src(web.move , {base:'src'})   
+             .pipe(gulp.dest('dist/files'));
+});
+
+//打包
 
 gulp.task('zipfile', function () {
-    gulp.src(web.zips) //要壓縮的檔案
+    var timeStamp = moment().format("YYYY-MM-D_HH-mm");
+    return gulp.src(['dist/*' ,'dist/**/*']) //要壓縮的檔案
         .pipe(gulpPlumber())
-        // .pipe(zip('archive.zip'))
-        .pipe(gulp.dest('dist')) //指定壓縮後的路徑
+        .pipe(zip('archive_' + timeStamp + '.zip'))
+        .pipe(gulp.dest('compress'))
 
 });
-
-
 
 //執行指令
 
 gulp.task('default', ['static']);
-gulp.task('zip', ['zipfile']);
+gulp.task('zip', [ 'copy' , 'zipfile']);
