@@ -4,4 +4,4 @@ $('.banner_carousel').owlCarousel({
     items: 1,
     
 });
-console.log('ok');
+console.log('ok1');
