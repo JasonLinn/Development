@@ -12,12 +12,7 @@ $('.banner_carousel').owlCarousel({
 
 $(document).ready(function(){
 
-
-
-
-
-
-
+   
 
 
 });
