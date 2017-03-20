@@ -7,10 +7,6 @@ $('.banner_carousel').owlCarousel({
     items: 1,
     
 });
-console.log('ok1');
-
-    items: 1
-})
 
 //menu effect
 
