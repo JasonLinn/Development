@@ -1,50 +1,22 @@
+//basic setting
 @import "vender/bootstrap-sass/bootstrap";
+@import "base/reset";
 @import "base/var";
 @import "base/font";
-@import "base/reset";
 @import "base/setting";
+@import "base/color";
 @import "mixin/mixin";
+
+// component
 @import "modules/header";
 @import "modules/banner";
 @import "modules/login";
 
-//font
-@include body-font();
+// vender
+// skin
+// page
+//test
 
-//header style
-// @include header-style(small);
-@include headers(auto , 100px , 100px ,40px);
 
-.header {
-  .header--top {
-    background-color: #999;
-  }
 
-  .header--menu {
-    background-color: #666;
-  }
 
-  .header--login {
-    background-color: #888;
-  }
-}
-
-.banner_carousel {
-  width: 1920px;
-
-  .banner-item {
-    width: 100%;
-    height: 450px;
-  }
-}
-
-.header--menu {
-  .link {}
-
-  .menu {
-    .sub_menu {
-      display: none;
-    }
-  }
-
-}

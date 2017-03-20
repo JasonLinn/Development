@@ -15,8 +15,8 @@
   // Animation
 
 // ----------------------------------------------------------------------
-// @import "mixins/animate-link";
-// @import "mixins/animations";
+@import "mixins/animate-link";
+@import "mixins/animations";
 // @import "mixins/backface-visibility";
 // @import "mixins/keyframes";
 // @import "mixins/single-transform";
@@ -30,7 +30,7 @@
 
 // ----------------------------------------------------------------------
 // @import "mixins/hide-text";
-// @import "mixins/hover-focus";
+@import "mixins/hover-focus";
 // @import "mixins/replace-text";
 
 // ----------------------------------------------------------------------
@@ -38,17 +38,18 @@
   // Gradients
 
 // ----------------------------------------------------------------------
-// @import "mixins/linear-gradient";
-// @import "mixins/linear-gradient-angle";
+@import "mixins/linear-gradient";
+@import "mixins/linear-gradient-angle";
 
 // ----------------------------------------------------------------------
 
   // Layout
 
 // ----------------------------------------------------------------------
-// @import "mixins/background-cover";
+@import "mixins/background-cover";
 @import "mixins/box-model";
-// @import "mixins/clearfix";
+@import "mixins/clearfix";
+@import "mixins/section_area";
 // @import "mixins/inline-block";
 
 // ----------------------------------------------------------------------
@@ -65,7 +66,7 @@
   // Styles
 
 // ----------------------------------------------------------------------
-// @import "mixins/box-shadow";
+@import "mixins/box-shadow";
 // @import "mixins/inner-shadow";
 // @import "mixins/opacity";
 // @import "mixins/placeholder";

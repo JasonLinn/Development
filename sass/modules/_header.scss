@@ -22,21 +22,20 @@
     }
   }
 }
-
 // can modify height
-@mixin headers($header_height:0 , $top_height:0 , $menu_height:0 , $login_height:0) {
+@mixin headers($header_height:null , $top_height:null , $menu_height:null , $login_height:null) {
   .header {
     height: $header_height;
     @include box-sizing(border-box);
-    .header--top {
+    .header-top {
       height: $top_height;
       @include box-sizing(border-box);
     }
-    .header--menu {
+    .header-topnav {
       height: $menu_height;
       @include box-sizing(border-box);
     }
-    .header--login {
+    .header-login {
       height: $login_height;
       @include box-sizing(border-box);
     }

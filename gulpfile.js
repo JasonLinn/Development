@@ -81,7 +81,7 @@ gulp.task('styles', function () {
 
 //html
 gulp.task('fileinclude', function () {
-    gulp.src(['app/*.html'])
+    gulp.src(['app/*.html','app/**/*.html'])
         .pipe(gulpPlumber())
         .pipe(fileinclude({
             prefix: '@@',
