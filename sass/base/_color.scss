@@ -1,0 +1,24 @@
+//=====================================
+//color
+//=====================================
+
+
+@if  $theme_black == true {
+//base
+$base-color : #000;
+// header
+$header-bgcolor     : #000;
+// wrapper
+
+// footer
+}
+
+
+@if  $theme_red == true {
+//base
+$base-color : red;
+// header
+$header-bgcolor     :red;
+// wrapper
+// footer
+}
