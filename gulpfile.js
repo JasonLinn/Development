@@ -40,7 +40,7 @@ var web = {
     ],
     js: [
         'js/*',
-         'js/**/*',
+         'js/**/*'
     ] 
     // images: 'resources/assets/images/*',
     // fonts: ['resources/assets/fonts/*', 'resources/assets/fonts/**/*'],
