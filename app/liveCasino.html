@@ -4,36 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <style>
-    	.main-live-casino_li{
-    		background-color: #242424;
-			padding: 20px;
-			box-sizing: border-box;
-    	}
-		.main-live-casino-wrapper{
-			padding: 20px;
-			box-sizing:border-box;
-			border:2px solid #5c8ee0;
-			transition: .5s;
-		}
-		.main-live-casino-wrapper:hover{
-			border:2px solid #FAAE30;
-		}
-    </style>
+    <title>liveCasino</title>
+	<link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.css">
+    @@include('modules/meta.html')
 </head>
 <body>
+     @@include('template/header.html')
+     @@include('template/banner.html')
 	<main>
-		<div class="container">
+		<div class="container live-casino-main">
 			<div class="row">
 				<ul class="main-live-casino">
+
 
 				</ul>
 			</div>
 		</div>		
 	</main>
-	
+     @@include('template/wrapper.html')
+     @@include('template/footer.html')
+     @@include('modules/script.html')
 	<script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script> 
 	<script type="text/javascript" src="js/liveCasino.js"></script>
 </body>

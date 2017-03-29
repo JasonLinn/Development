@@ -7811,3 +7811,163 @@ table {
   left: 900px;
   top: 10px;
 }
+
+body {
+  background-color: #000;
+}
+
+.header-topbar-language {
+  float: left;
+}
+
+.header-topbar-language_li {
+  display: inline-block;
+}
+
+.header-topbar-fast-link {
+  float: right;
+}
+
+.header-topbar-fast-link_li {
+  display: inline-block;
+  color: #aaa;
+}
+
+.main-live-casino_li {
+  background-color: #111;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-live-casino-wrapper {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid #5c8ee0;
+  transition: .5s;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-live-casino-wrapper a {
+  text-decoration: none;
+}
+
+.main-live-casino-wrapper:hover {
+  border: 2px solid #FAAE30;
+}
+
+.main-live-casino-wrapper:hover .btn-live-casino-enter {
+  opacity: 1;
+}
+
+.main-live-casino-wrapper:hover .main-live-casino-wrapper_a {
+  color: #FAAE30;
+  text-decoration: none;
+}
+
+.main-live-casino-wrapper-theme {
+  position: relative;
+}
+
+.main-live-casino-wrapper-theme:after {
+  content: '';
+  display: block;
+  max-width: 278px;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: .5s;
+}
+
+.main-live-casino-wrapper:hover .main-live-casino-wrapper-theme:after {
+  opacity: 1;
+}
+
+.btn-live-casino-enter {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 134px;
+  height: 31px;
+  opacity: 0;
+  transition: .5s;
+  z-index: 10;
+}
+
+.btn-live-casino-enter a {
+  background-color: #FAAE30;
+  padding: 5px 35px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "微軟正黑體";
+  text-decoration: none;
+}
+
+.main-live-casino-wrapper_a {
+  text-decoration: none;
+  display: block;
+  padding-top: 20px;
+  color: #aaa;
+  text-align: center;
+  transition: .5s;
+  font-family: "微軟正黑體";
+}
+
+.live-casino-main {
+  margin-top: 80px;
+}
+
+.main-live-casino-upcoming {
+  text-align: center;
+  color: #6C729C;
+  font-family: "微軟正黑體", "Open Sans", sans-serif;
+}
+
+.main-live-casino-upcoming_i {
+  font-size: 40px;
+}
+
+.main-live-casino-upcoming_h4 {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.main-live-casino-upcoming_p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.main-live-casino-wrapper {
+  height: 286.5px;
+}
+
+.main-live-casino-wrapper-content {
+  width: 300px;
+  height: 130px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .main-live-casino-wrapper {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+  }
+  .main-live-casino-wrapper img {
+    margin: auto;
+  }
+}

@@ -1,6 +1,6 @@
 // plugin  var
 var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     sass = require('gulp-sass'),
     bower = require('gulp-bower'),
     connect = require('gulp-connect-php'),
@@ -126,7 +126,7 @@ gulp.task('static', ['styles'], function () {
     gulp.watch('*.html').on('change', reload); //watch html
     gulp.watch( web.html , ['fileinclude'] ).on('change', reload); //watch template
     gulp.watch( web.js ).on('change', reload); //watch js
-    gulp.watch( web.move , ['copy'] ).on('change', reload); //watch template
+    // gulp.watch( web.move , ['copy'] ).on('change', reload); //watch template
   
 });
 
