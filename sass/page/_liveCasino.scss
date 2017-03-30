@@ -1,6 +1,11 @@
+$_wrapperHeight : 286.5+px;//每一個項目的高
+
 body{
 	background-color:#000;
 	// outline:1px solid #f00;
+}
+a{
+	text-decoration: none !important;
 }
 .header-topbar-language{
 	float:left;
@@ -35,13 +40,14 @@ body{
 		.btn-live-casino-enter{
 			opacity: 1;
 		}
-		.main-live-casino-wrapper_a{
+		.main-live-casino-wrapper_p{
 			color:#FAAE30;
 			text-decoration: none;
 		}
 	}
 
 }
+
 .main-live-casino-wrapper-theme{
 	position:relative;
 	&:after{
@@ -77,16 +83,23 @@ body{
 	opacity: 0;
 	transition:.5s;
 	z-index: 10;
+	text-align:center;
 }
-.btn-live-casino-enter a{
+.main-live-cmain-live-casino_li{
+	@include clearfix;
+}
+.main-live-casino-wrapper{
+	@include clearfix;
+}
+.btn-live-casino-enter{
 	background-color: #FAAE30;
-	padding: 5px 35px;
+	padding: 5px 30px;
   	border-radius: 5px;
 	color:#fff;
     font-family: "微軟正黑體";
 	text-decoration: none;
 }
-.main-live-casino-wrapper_a{
+.main-live-casino-wrapper_p{
 	text-decoration: none;
 	display: block;
 	padding-top: 20px;
@@ -117,17 +130,17 @@ body{
 	font-size: 14px;
 }
 .main-live-casino-wrapper{
-	height: 286.5px;
+	height: $_wrapperHeight;
 }
 .main-live-casino-wrapper-content{
 	width: 300px;
 	height: 130px;
-	position: absolute;
+	position: absolute;	
 	margin:auto;
 	top: 0;
 	right: 0;
 	left: 0;
-	bottom: 0;	
+	bottom: 0;
 }
 @media screen and (max-width: 767px)  {
 	.main-live-casino-wrapper{

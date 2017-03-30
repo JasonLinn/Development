@@ -7790,6 +7790,60 @@ table {
   border-spacing: 0;
 }
 
+.header-topbar-fast-link_li {
+  font-size: 16px;
+  position: relative;
+  padding: 0 5px;
+}
+
+.header-topbar-fast-link_li:after {
+  content: '|';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  color: #fff;
+}
+
+.header-topnav-logo {
+  float: left;
+}
+
+.header-topnav-login {
+  float: right;
+}
+
+.header-topnav-login_li {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 94px;
+}
+
+.header-topnav-login_li input {
+  width: 100px;
+  height: 24px;
+}
+
+.header-topnav:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.header-login_li {
+  font-size: 24px;
+  color: #fff;
+  font-family: "微軟正黑體", "Open Sans", sans-serif;
+  display: inline-block;
+  width: 10.5%;
+  text-align: center;
+}
+
+.header-login_li_a {
+  display: block;
+  padding: 20px 0;
+}
+
 .banner {
   width: 1920px;
   height: 450px;
@@ -7814,6 +7868,10 @@ table {
 
 body {
   background-color: #000;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .header-topbar-language {
@@ -7860,7 +7918,7 @@ body {
   opacity: 1;
 }
 
-.main-live-casino-wrapper:hover .main-live-casino-wrapper_a {
+.main-live-casino-wrapper:hover .main-live-casino-wrapper_p {
   color: #FAAE30;
   text-decoration: none;
 }
@@ -7901,18 +7959,45 @@ body {
   opacity: 0;
   transition: .5s;
   z-index: 10;
+  text-align: center;
 }
 
-.btn-live-casino-enter a {
+.main-live-cmain-live-casino_li {
+  *zoom: 1;
+}
+
+.main-live-cmain-live-casino_li:before, .main-live-cmain-live-casino_li:after {
+  content: "";
+  display: table;
+}
+
+.main-live-cmain-live-casino_li:after {
+  clear: both;
+}
+
+.main-live-casino-wrapper {
+  *zoom: 1;
+}
+
+.main-live-casino-wrapper:before, .main-live-casino-wrapper:after {
+  content: "";
+  display: table;
+}
+
+.main-live-casino-wrapper:after {
+  clear: both;
+}
+
+.btn-live-casino-enter {
   background-color: #FAAE30;
-  padding: 5px 35px;
+  padding: 5px 30px;
   border-radius: 5px;
   color: #fff;
   font-family: "微軟正黑體";
   text-decoration: none;
 }
 
-.main-live-casino-wrapper_a {
+.main-live-casino-wrapper_p {
   text-decoration: none;
   display: block;
   padding-top: 20px;

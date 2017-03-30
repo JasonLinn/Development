@@ -41,3 +41,52 @@
     }
   }
 }
+.header-topbar-fast-link_li{
+  font-size: 16px;
+  position:relative;
+  padding: 0 5px;
+  &:after{
+    content:'|';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    color:#fff;
+
+  }
+}
+.header-topnav-logo{
+	float:left;
+}
+.header-topnav-login{
+	float:right;
+}
+.header-topnav-login_li{
+  font-size: 16px;
+	input{
+		width:100px;
+    height: 24px;
+	}
+	display:inline-block;
+  line-height: 94px;
+}
+.header-topnav{
+  &:after{
+    content:'';
+    display:block;
+    clear: both;
+  }
+}
+.header-login_li{
+  font-size: 24px;
+  color:#fff;
+  font-family: $fontfamilys;
+  display:inline-block;
+  width:10.5%;
+  text-align: center;
+  // line-height: 60px;
+}
+.header-login_li_a{
+  display: block;
+  padding: 20px 0;
+}
