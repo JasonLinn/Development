@@ -7818,10 +7818,6 @@ table {
   top: 10px;
 }
 
-body {
-  background-color: #000;
-}
-
 a {
   text-decoration: none !important;
 }
@@ -8011,4 +8007,9 @@ a {
   .main-live-casino-wrapper img {
     margin: auto;
   }
+}
+
+.cs-home1_table {
+  background-color: #ccc;
+  border: 1px solid #000;
 }
